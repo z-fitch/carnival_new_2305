@@ -14,4 +14,12 @@ class Visitor
   def spending_format(raw_data)
     raw_data.delete("$").to_i
   end
+
+  def add_preference(preference)
+    preferences << preference
+  end
+
+  def tall_enough?(required_height)
+    height >= required_height
+  end
 end
